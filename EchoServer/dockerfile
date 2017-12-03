@@ -1,0 +1,10 @@
+# Dockerfile CentOS 7 image -non privileged user entry
+
+FROM centos:latest
+MAINTAINER thanostak@gmail.com
+
+RUN useradd -ms /bin/bash user
+
+CMD "echo" "This is a custom container message for our students"
+
+USER user

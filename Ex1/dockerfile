@@ -1,0 +1,9 @@
+# Exercise 1 Create custom image from a Dockerfile 
+
+FROM centos:latest
+MAINTAINER thanostak@gmail.com
+
+RUN yum -y update
+RUN yum install -y openssh-server
+RUN yum install -y httpd
+EXPOSE 80 22

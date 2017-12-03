@@ -1,0 +1,8 @@
+# Dockerfile CentOS 7 image -non privileged user entry
+
+FROM centos:latest
+MAINTAINER thanostak@gmail.com
+
+RUN useradd -ms /bin/bash user
+RUN echo "export 192.168.1.1" >> /etc/export.list
+USER user
